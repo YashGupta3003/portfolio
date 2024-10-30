@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Gupta - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <div class="loading-text">Welcome to My Portfolio</div>
+    </div>
+    <div class="container" style="display: none;" id="mainContent">
+        <nav class="nav-menu">
+            <div class="nav-item" data-section="education">Education</div>
+            <div class="nav-item" data-section="achievements">Achievements</div>
+            <div class="nav-item" data-section="projects">Projects</div>
+            <div class="nav-item" data-section="experience">Experience</div>
+            <div class="nav-item" data-section="research">Research</div>
+            <div class="nav-item" data-section="positions">Positions</div>
+            <div class="nav-item" data-section="skills">Skills</div>
+        </nav>
+        <div class="content">
+            <div class="header-container">
+                <h1 class="name-title">Yash Gupta</h1>
+                <div class="intro-text">
+                    <p>Hi! I'm <span class="highlight">Yash Gupta</span>, a Computer Science and Mathematics student at <span class="highlight">BITS Pilani set to graduate in 2026</span>. I'm passionate about Machine Learning, Quantitative Finance and Software Development, with experience ranging from developing predictive models and algorithmic solutions to building full-stack web applications.</p>
+                    
+                    <p>Currently exploring the intersection of ML and financial markets while maintaining a strong competitive programming presence.</p>
+                    
+                    <p>When I'm not coding or analyzing data, you can find me listening to music or reading some old sci fi novels.</p>
+                    
+                    <p class="ps-note">PS: Currently seeking opportunities in Software Development, Machine Learning and Quantitative Finance roles.</p>
+                </div>
+                <p class="contact-info">
+                    +91 8888002200 | gupta.yash3003@gmail.com | 
+                    <a href="https://linkedin.com/in/yash-gupta-7b0684224/" target="_blank" class="hover-effect">LinkedIn</a> | 
+                    <a href="https://github.com/YashGupta3003/" target="_blank" class="hover-effect">GitHub</a>
+                </p>
+            </div>
+            
+            <div class="two-column-grid">
+                <div class="left-column">
+                    <div class="education section-card" id="education">
+                        <h2 class="section-title">Education</h2>
+                        <div class="education-item card-hover">
+                            <h3>BITS Pilani (Aug 2021 – May 2026)</h3>
+                            <p>B.E. Computer Science</p>
+                            <p>M.Sc Mathematics, Minor in Finance</p>
+                            
+
+
+                        </div>
+                    </div>
+
+                    <div class="achievements section-card" id="achievements">
+                        <h2 class="section-title">Achievements</h2>
+                        <div class="achievement-grid">
+                            <div class="achievement card-hover">
+                                <h3>Goldman Sachs QA Hackathon</h3>
+                                <p>Rank 3 in BITS Hyderabad and ranked top 50 nationally</p>
+                            </div>
+                            <div class="achievement card-hover">
+                                <h3>Nomura Markets Challenge</h3>
+                                <p>Rank 1 in BITS Hyderabad and among top 15 nationally</p>
+                            </div>
+                            <div class="achievement card-hover">
+                                <h3>CodeChef: yash3003</h3>
+                                <p>1700 Rating (3-Star)</p>
+                                <p>Starters 143: Global Rank 206</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects section-card" id="projects">
+                        <h2 class="section-title">Projects</h2>
+                        <div class="project-list">
+                            <div class="project card-hover">
+                                <h3>Stock Price Prediction Model</h3>
+                                <p class="tech-stack">Python, Machine Learning, Llama3</p>
+                                <ul class="project-details">
+                                    <li>Developed a SARIMAX-based stock price prediction model with sentiment analysis using Llama3</li>
+                                    <li>Built a Streamlit dashboard for visualization of sentiment trends and forecasts</li>
+                                </ul>
+                            </div>
+                            <div class="project card-hover">
+                                <h3>BITSBIDS</h3>
+                                <p class="tech-stack">SpringBoot, MySQL, React, AWS, Docker</p>
+                                <ul class="project-details">
+                                    <li>Implemented a dockerized web application with comprehensive functionality</li>
+                                    <li>Deployed using SpringBoot, MySQL, Docker, and AWS for image upload</li>
+                                </ul>
+                            </div>
+                            <div class="project card-hover">
+                                <h3>Rain Forecast</h3>
+                                <p class="tech-stack">Python, Keras, Kaggle</p>
+                                <ul class="project-details">
+                                    <li>Developed LSTM, RandomForestRegressor, and MLP models for rainfall prediction</li>
+                                    <li>Utilized 50+ years of Indian Weather Data in Ncep files</li>
+                                    <li>Github: <a href="https://github.com/YashGupta3003/IMD_FINAL-" target="_blank" class="hover-effect">Rain-Forecast</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <div class="experience section-card" id="experience">
+                        <h2 class="section-title">Experience</h2>
+                        <div class="exp-item card-hover">
+                            <h3>ML Summer Intern - Indian Meteorological Department</h3>
+                            <p class="duration">May 2023 – July 2023 | Pune, MH</p>
+                            <ul class="experience-details">
+                                <li>Developed MLP and LSTM models for next-day rainfall prediction</li>
+                                <li>Utilized Back-Propagation to analyse 50-year rainfall data</li>
+                                <li>Enhanced model accuracy by 34% through optimized inputs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="research section-card" id="research">
+                        <h2 class="section-title">Research</h2>
+                        <div class="research-item card-hover">
+                            <h3>Research Paper on ML Induced Forecast Technology</h3>
+                            <p>Under Scientist E, Dr. Rajib Chakraborty</p>
+                            <p>Writing a paper on ML-influenced models for rainfall prediction</p>
+                        </div>
+                    </div>
+
+                    <div class="positions section-card" id="positions">
+                        <h2 class="section-title">Positions of Responsibility</h2>
+                        <div class="position-grid">
+                            <div class="position-item card-hover">
+                                <h3>Senior Quant and Analytics Associate</h3>
+                                <p class="organization">The Wall Street Club</p>
+                                <ul class="position-details">
+                                    <li>Analyzed stock correlations and market trends</li>
+                                    <li>Used ML for portfolio diversification</li>
+                                </ul>
+                            </div>
+                            <div class="position-item card-hover">
+                                <h3>Operations and Training Coordinator</h3>
+                                <p class="organization">Placement Unit</p>
+                                <ul class="position-details">
+                                    <li>Managed placement process for 2000+ students</li>
+                                    <li>Devised training strategies based on metrics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills section-card" id="skills">
+                        <h2 class="section-title">Technical Skills</h2>
+                        <div class="skills-categories">
+                            <div class="skill-category">
+                                <h3>Languages</h3>
+                                <div class="skill-items">
+                                    <div class="skill-item">Python</div>
+                                    <div class="skill-item">C/C++</div>
+                                    <div class="skill-item">SQL</div>
+                                    <div class="skill-item">Java</div>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Developer Tools</h3>
+                                <div class="skill-items">
+                                    <div class="skill-item">Git</div>
+                                    <div class="skill-item">MongoDB</div>
+                                    <div class="skill-item">MySQL</div>
+                                    <div class="skill-item">StreamLit</div>
+                                    <div class="skill-item">Llama3</div>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Subjects</h3>
+                                <div class="skill-items">
+                                    <div class="skill-item">OOPS</div>
+                                    <div class="skill-item">Machine Learning</div>
+                                    <div class="skill-item">DSA</div>
+                                    <div class="skill-item">DBMS</div>
+                                    <div class="skill-item">OS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+    
